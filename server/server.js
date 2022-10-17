@@ -17,7 +17,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://chat-007-app.herokuapp.com/"],
     methods: ["GET", "POST"],
   },
 });
@@ -27,7 +27,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 // middlewares
-app.use(cors({ origin: ["http://localhost:3000"] }));
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://chat-007-app.herokuapp.com/"],
+  })
+);
 dotenv.config();
 
 // DB Config

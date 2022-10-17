@@ -172,7 +172,7 @@ const Signup = () => {
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      <FormControl id="pic">
+      <FormControl style={{ display: "none" }} id="pic">
         <FormLabel>Upload your Picture</FormLabel>
         <Input
           type="file"
