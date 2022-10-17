@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server/server.js",
     "server": "nodemon server/server.js",
-    "heroku-postbuild": "YARN_CONFIG_PRODUCTION=false yarn install --prefix client && yarn run build --prefix client"
+    "heroku-postbuild": "YARN_CONFIG_PRODUCTION=false yarn install --prefix client && yarn build --prefix client"
     },
   "author": "",
   "license": "ISC",
